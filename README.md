@@ -6,9 +6,9 @@ Note that the project name [is not set](https://github.com/dfarrell07/SDNPerf/is
 
 ### Overview
 
-This project aims to bring some sanity to the SDN controller performance testing landscape by providing a well architected framework such tests.
+This project aims to bring some sanity to the SDN controller performance testing landscape by providing a well architected framework for such tests.
 
-Performance tests for controllers are typically one-off scripts written by unconnected developers. They not shared, documented or tested. They don't enable code reuse. They aren't easy to find (many are emailed dev to dev). They don't support multiple controllers.
+Performance tests for controllers are typically one-off scripts written by unconnected developers. They are not shared, documented or tested. They don't enable code reuse. They aren't easy to find (many are emailed dev to dev). They don't support multiple controllers.
 
 By providing a framework with a base set of tests, support for multiple SDN controllers, reusable code for working with northbound and southbound devices, a standard results format, stats/graphing tools and support for publishing results to a central location, we hope to dramatically advance the state of SDN controller performance testing.
 
