@@ -5,7 +5,7 @@ import logging.handlers
 
 try:
     import yaml
-except ImportError, err:
+except ImportError as err:
     import sys
     sys.stderr.write("ERROR: {}. Are you in a venv with pyyaml?\n".format(err))
     raise
