@@ -17,7 +17,6 @@ class TestGetLogger(unittest.TestCase):
 
     """Tests for the lib method that builds loggers."""
 
-    #@unittest.expectedFailure
     def test_type(self):
         """Confirm that the object returned is of type Logger."""
         logger = lib.get_logger()
@@ -28,8 +27,12 @@ class TestGetConfig(unittest.TestCase):
 
     """Tests for the lib method that loads the general program config."""
 
-    #@unittest.expectedFailure
     def test_type(self):
         """Confirm that the object returned is of type Logger."""
         config = lib.get_config()
         assert type(config) is dict
+
+    def test_invalid(self):
+        """Test proper failure for fake config file."""
+        with self.assertRaises(IOError):
+            config = lib.get_config("fake.yaml")
