@@ -1,5 +1,12 @@
+# Vim tmp files
 *.swp
 *.swo
 *.swn
 *.swm
+
+# Python tmp files
 *.pyc
+
+# Setuptools/Tox
+*.egg-info/
+.tox
