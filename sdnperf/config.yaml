@@ -1,2 +1,2 @@
 # Logging options
-logging: {log_file: logs/bot.log, file_handler_level: DEBUG, stream_handler_level: INFO}  
+logging: {log_file: sdnperf/logs/sdnperf.log, file_handler_level: DEBUG, stream_handler_level: INFO}  

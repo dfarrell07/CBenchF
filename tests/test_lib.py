@@ -10,7 +10,7 @@ except ImportError, err:
     sys.stderr.write("ERROR: {}. Try installing python-yaml.\n".format(err))
     raise
 
-import lib.lib as lib
+import sdnperf.lib.lib as lib
 
 
 class TestGetLogger(unittest.TestCase):
