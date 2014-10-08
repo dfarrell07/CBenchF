@@ -12,6 +12,23 @@ Performance tests for controllers are typically one-off scripts written by uncon
 
 By providing a framework with a base set of tests, support for multiple SDN controllers, reusable code for working with northbound and southbound devices, a standard results format, stats/graphing tools and support for publishing results to a central location, we hope to dramatically advance the state of SDN controller performance testing.
 
+### Running Tests
+
+The project uses Tox to run unit tests with various Python interpreters, confirm that Sphinx-gen'd docs build and test that the code conforms to PEP8 style. To kick off all tests, simply issue the `tox` command in the project's root. Note that Tox automatically builds and brings down virtual environments, installing required dependences as it does.
+
+```
+[~/perf]$ tox
+<snip>
+  py27: commands succeeded
+  py33: commands succeeded
+  pypy: commands succeeded
+  docs: commands succeeded
+  pep8: commands succeeded
+  congratulations :)
+```
+
+To run a specific set of tests in a virtual environment, use `tox -e<name of tests>`. For example, `tox -epep8` to run PEP8 style checks or `tox -epy27` to run unit tests with a Python 2.7 interpreter.
+
 ### Contributing
 
 Contributions are encouraged! At this point, I think most contributions would come as feature requests and use case examples. Please add those to the [Requirements](https://github.com/dfarrell07/SDNPerf/wiki/Requirements) wiki page. If the feature requests are very narrowly scoped they may also be suitable for an [Issue](https://github.com/dfarrell07/SDNPerf/issues).
