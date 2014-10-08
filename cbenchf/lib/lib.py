@@ -15,7 +15,7 @@ except ImportError as err:
 _config = None
 _loaded_config_file = None
 _logger = None
-default_config = "sdnperf/config.yaml"
+default_config = "cbenchf/config.yaml"
 
 
 def get_config(config_file=None):
