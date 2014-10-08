@@ -9,11 +9,11 @@ setup(
     author_email="dfarrell07@redhat.com",
     # See for more classifer options: http://goo.gl/8jtDH4
     classifiers=[
-    "Development Status :: 3 - Alpha",
-    "Framework :: Flask",
-    "Natural Language :: English",
-    # TODO: Test with other versions of Python
-    "Programming Language :: Python :: 2.7",
+        "Development Status :: 3 - Alpha",
+        "Framework :: Flask",
+        "Natural Language :: English",
+        # TODO: Test with other versions of Python
+        "Programming Language :: Python :: 2.7",
     ],
     keywords="SDN Software Defined Networking OpenDaylight controller \
               performace testing CBench WCBench OpenStack",
@@ -26,7 +26,7 @@ setup(
     # TODO: List dev and test env requirements
     extras_require={
         "dev": [],
-        "test": ["tox", "pep8"],
+        "test": ["tox", "flake8"],
     },
     # TODO: Do we need to specify any package data?
     # ^^See: https://github.com/pypa/sampleproject/blob/master/setup.py#L81

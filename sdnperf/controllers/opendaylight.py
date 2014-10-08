@@ -1,6 +1,7 @@
 """Module with abstraction of the OpenDaylight controller."""
 
-import lib.lib as lib
+import sdnperf.lib.lib as lib
+
 
 class OpenDaylight(object):
 

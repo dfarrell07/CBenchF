@@ -3,13 +3,6 @@
 import unittest
 import logging
 
-try:
-    import yaml
-except ImportError as err:
-    import sys
-    sys.stderr.write("ERROR: {}. Try installing python-yaml.\n".format(err))
-    raise
-
 import sdnperf.lib.lib as lib
 
 
@@ -35,4 +28,4 @@ class TestGetConfig(unittest.TestCase):
     def test_invalid(self):
         """Test proper failure for fake config file."""
         with self.assertRaises(IOError):
-            config = lib.get_config("fake.yaml")
+            lib.get_config("fake.yaml")
