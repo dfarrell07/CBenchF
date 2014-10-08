@@ -50,7 +50,6 @@ def get_config(config_file=None):
         return _config
 
 
-
 def get_logger():
     """Build and return a logger for formatted stream and file output.
 
@@ -98,17 +97,19 @@ def get_logger():
                                                         mode="a",
                                                         backupCount=50,
                                                         delay=True)
-    file_handler_level = getattr(logging,
-                         config["logging"]["file_handler_level"].upper(),
-                         logging.DEBUG)
+    file_handler_level = getattr(
+        logging,
+        config["logging"]["file_handler_level"].upper(),
+        logging.DEBUG)
     file_handler.setLevel(file_handler_level)
     file_handler.setFormatter(file_formatter)
 
     # Build stream handler (for output to stdout)
     stream_handler = logging.StreamHandler()
-    stream_handler_level = getattr(logging,
-                           config["logging"]["stream_handler_level"].upper(),
-                           logging.INFO)
+    stream_handler_level = getattr(
+        logging,
+        config["logging"]["stream_handler_level"].upper(),
+        logging.INFO)
     stream_handler.setLevel(stream_handler_level)
     stream_handler.setFormatter(stream_formatter)
 
