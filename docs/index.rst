@@ -6,7 +6,9 @@
 Welcome to SDNPerf's documentation!
 ===================================
 
-Contents:
+SDNPerf (better name TBD) is an SDN controller performance testing framework.
+
+These docs, along with the rest of the project, are a work in progress.
 
 .. toctree::
    :maxdepth: 2
