@@ -3,7 +3,7 @@
 import unittest
 import logging
 
-import sdnperf.lib.lib as lib
+import cbenchf.lib.lib as lib
 
 
 class TestGetLogger(unittest.TestCase):

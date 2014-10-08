@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="SDNPerf",
+    name="CBenchF",
     version="0.0.1",
     description="SDN Controller Performance Testing Framework",
-    url="https://github.com/dfarrell07/SDNPerf",
+    url="https://github.com/dfarrell07/CBenchF",
     author="Daniel Farrell",
     author_email="dfarrell07@redhat.com",
     # See for more classifer options: http://goo.gl/8jtDH4

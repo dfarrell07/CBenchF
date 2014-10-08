@@ -2,7 +2,7 @@
 
 import unittest
 
-import sdnperf.controllers.opendaylight as odl_mod
+import cbenchf.controllers.opendaylight as odl_mod
 
 
 class TestInit(unittest.TestCase):
