@@ -10,3 +10,7 @@ class OpenDaylight(object):
     def __init__(self):
         """Build logger."""
         self.logger = lib.get_logger()
+
+    def start(self):
+        """API entry point for starting an ODL controller instance."""
+        pass

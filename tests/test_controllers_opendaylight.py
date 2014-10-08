@@ -2,8 +2,7 @@
 
 import unittest
 
-import sdnperf.lib.lib as lib
-import sdnperf.controllers.opendaylight as odl
+import sdnperf.controllers.opendaylight as odl_mod
 
 
 class TestInit(unittest.TestCase):
@@ -12,4 +11,17 @@ class TestInit(unittest.TestCase):
 
     def test_basic(self):
         """Test a basic, all default construction."""
-        odl.OpenDaylight()
+        odl_mod.OpenDaylight()
+
+
+class TestStart(unittest.TestCase):
+
+    """Test starting an OpenDaylight controller instance"""
+
+    def setUp(self):
+        """Build an ODL abstraction."""
+        self.odl = odl_mod.OpenDaylight()
+
+    def test_present(self):
+        """Confirm that the start method is present. Required API method."""
+        hasattr(self.odl, "start") and callable(getattr(self.odl, "start"))
