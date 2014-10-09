@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.3"
+  - "2.7"
+# Install dependencies
+pip install -r requirements.txt
+# Run tests
+tox
