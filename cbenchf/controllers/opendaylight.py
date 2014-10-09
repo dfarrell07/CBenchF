@@ -14,3 +14,7 @@ class OpenDaylight(object):
     def start(self):
         """API entry point for starting an ODL controller instance."""
         pass
+
+    def stop(self):
+        """API entry point for stopping an ODL controller instance."""
+        pass
