@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dfarrell07/CBenchF.svg?branch=master)](https://travis-ci.org/dfarrell07/CBenchF)
+
 ## CBenchF
 
 SDN Controller Benchmark Framework
