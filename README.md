@@ -14,7 +14,7 @@ Performance tests for controllers are typically one-off scripts written by uncon
 
 By providing a framework with a base set of tests, support for multiple SDN controllers, reusable code for working with northbound and southbound devices, a standard results format, stats/graphing tools and support for publishing results to a central location, we hope to dramatically advance the state of SDN controller performance testing.
 
-See the [Architecture](https://github.com/dfarrell07/CBenchF/wiki/Architecture) and [Requirements](https://github.com/dfarrell07/CBenchF/wiki/Requirements) wiki pages for more information.
+See the [Architecture](https://github.com/dfarrell07/CBenchF/wiki/Architecture), [Tests](https://github.com/dfarrell07/CBenchF/wiki/Tests) and [Requirements](https://github.com/dfarrell07/CBenchF/wiki/Requirements) wiki pages for more information.
 
 ### Running Tests
 
