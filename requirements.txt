@@ -1,0 +1,5 @@
+PyYAML==3.11
+tox==1.7.1
+flake8==2.2.0
+pytest==2.5.2
+Sphinx==1.2.3

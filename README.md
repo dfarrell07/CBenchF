@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dfarrell07/CBenchF.svg?branch=master)](https://travis-ci.org/dfarrell07/CBenchF)
+
 ## CBenchF
 
 SDN Controller Benchmark Framework
@@ -11,6 +13,8 @@ This project aims to bring some sanity to the SDN controller performance testing
 Performance tests for controllers are typically one-off scripts written by unconnected developers. They are not shared, documented or tested. They don't enable code reuse. They aren't easy to find (many are emailed dev to dev). They don't support multiple controllers.
 
 By providing a framework with a base set of tests, support for multiple SDN controllers, reusable code for working with northbound and southbound devices, a standard results format, stats/graphing tools and support for publishing results to a central location, we hope to dramatically advance the state of SDN controller performance testing.
+
+See the [Architecture](https://github.com/dfarrell07/CBenchF/wiki/Architecture), [Tests](https://github.com/dfarrell07/CBenchF/wiki/Tests) and [Requirements](https://github.com/dfarrell07/CBenchF/wiki/Requirements) wiki pages for more information.
 
 ### Running Tests
 

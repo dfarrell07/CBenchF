@@ -25,3 +25,16 @@ class TestStart(unittest.TestCase):
     def test_present(self):
         """Confirm that the start method is present. Required API method."""
         hasattr(self.odl, "start") and callable(getattr(self.odl, "start"))
+
+
+class TestStop(unittest.TestCase):
+
+    """Test stopping an OpenDaylight controller instance"""
+
+    def setUp(self):
+        """Build an ODL abstraction."""
+        self.odl = odl_mod.OpenDaylight()
+
+    def test_present(self):
+        """Confirm that the stop method is present. Required API method."""
+        hasattr(self.odl, "stop") and callable(getattr(self.odl, "stop"))
