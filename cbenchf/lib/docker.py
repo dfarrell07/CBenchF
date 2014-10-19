@@ -37,7 +37,7 @@ def check_docker_perms():
         raise IOError(err_msg)
 
 
-def run(image_name, detached=True):
+def run(image_name, cmd, detached=True):
     """Runs, using `docker run`, the given image.
 
     Note that the image will be pulled down from DockerHub if it isn't
@@ -47,6 +47,10 @@ def run(image_name, detached=True):
 
     :param image_name: Full name of the image to run.
     :type image_name: string
+    :param cmd: Command to pass to Docker comtainer.
+    :type cmd: string
+    :param detached: True if container should be in detached mode (-d).
+    :type detached: boolean
 
     """
     # Confirm that the user has permission to access the Docker socket
@@ -57,6 +61,7 @@ def run(image_name, detached=True):
     if detached:
         params.append("-d")
     params.append(image_name)
+    params.append(cmd)
 
     # Spawn subprocess to execute Docker run command
     subprocess.check_call(["docker"] + params)
