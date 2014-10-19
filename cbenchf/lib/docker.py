@@ -15,22 +15,29 @@ def check_docker_perms():
 
     See: http://goo.gl/f5NvXQ
 
-    TODO: Check if user is member of any group that owns socket, not just root.
-
     I would raise a PermissionError here, but trying to be Python 2.7
     compatible.
 
     :raises IOError: Need to be root to access Docker socket
 
     """
-    if os.geteuid() != 0:
-        err_msg = "Error: Must be root to interact with Docker socket"
+    # Find gid of group that owns the Docker socket
+    # TODO: Pull Docker socket path from config.yaml
+    stat_info = os.stat("/var/run/docker.sock")
+    sock_uid = stat_info.st_uid
+    sock_gid = stat_info.st_gid
+
+    # Get gids and uid of user running this process
+    user_gids = os.getgroups()
+    user_uid = os.geteuid()
+
+    if sock_gid not in user_gids and sock_uid != user_uid:
+        err_msg = "Error: You don't have permission to use the Docker socket."
         sys.stderr.write(err_msg)
         raise IOError(err_msg)
 
 
 def run(image_name, detached=True):
-
     """Runs, using `docker run`, the given image.
 
     Note that the image will be pulled down from DockerHub if it isn't
