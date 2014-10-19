@@ -72,4 +72,9 @@ class TestRun(unittest.TestCase):
         TODO: Look up Docker image name from config.yaml.
 
         """
-        docker_lib.run("opendaylight/helium:dev")
+        docker_lib.run("opendaylight/helium:dev", "echo hello world")
+
+    @unittest.skip("Not implemented")
+    def test_container_running(self):
+        """Issues a run command that should leave a container running."""
+        pass
