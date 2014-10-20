@@ -9,4 +9,5 @@
 
 # Setuptools/Tox
 *.egg-info/
+*.egg
 .tox
