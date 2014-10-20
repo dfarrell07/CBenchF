@@ -37,8 +37,8 @@ class CLI(cmd.Cmd):
 
     def help_start_odl(self):
         """Provide help message for start_odl command."""
-        print "start_odl"
-        print "\tStart an OpenDaylight controller."
+        print("start_odl")
+        print("\tStart an OpenDaylight controller.")
 
     def do_stop_odl(self, raw_args):
         """Stop the OpenDaylight controller.
@@ -51,8 +51,8 @@ class CLI(cmd.Cmd):
 
     def help_stop_odl(self):
         """Provide help message for stop_odl command."""
-        print "stop_odl"
-        print "\tStop the OpenDaylight controller."
+        print("stop_odl")
+        print("\tStop the OpenDaylight controller.")
 
     def do_shell(self, cmd):
         """Allows normal shell commands to be run.
@@ -65,8 +65,8 @@ class CLI(cmd.Cmd):
 
     def help_shell(self):
         """Provide help message for shell command."""
-        print "!|shell <command>"
-        print "\tSend command to underlying system shell (like Bash/ZSH)."
+        print("!|shell <command>")
+        print("\tSend command to underlying system shell (like Bash/ZSH).")
 
     def do_EOF(self, raw_args):
         """Cleans up when ctrl+d is used to exit CLI.
@@ -81,13 +81,13 @@ class CLI(cmd.Cmd):
 
     def help_EOF(self):
         """Provide help message for EOF (ctrl+d) command."""
-        print "ctrl+d"
-        print "\tClean up and close CLI cleanly."
+        print("ctrl+d")
+        print("\tClean up and close CLI cleanly.")
 
     def help_help(self):
         """Provide help message for help command."""
-        print "help [command]"
-        print "\tProvide help on given command. If no argument, list commands."
+        print("help [command]")
+        print("\tProvide help on given command. If no argument, list commands.")
 
 if __name__ == "__main__":
     CLI().cmdloop()
