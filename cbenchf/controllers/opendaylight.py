@@ -1,7 +1,8 @@
 """Module with abstraction of the OpenDaylight controller."""
 
+import docker as docker_mod
+
 import cbenchf.lib.lib as lib
-import cbenchf.lib.docker as docker_lib
 
 
 class OpenDaylight(object):
@@ -11,6 +12,9 @@ class OpenDaylight(object):
     def __init__(self):
         """Build logger."""
         self.logger = lib.get_logger()
+        self.docker = docker_mod.Client(base_url="unix://var/run/docker.sock",
+                                        version="1.2.0",
+                                        timeout=10)
 
     def start(self):
         """API entry point for starting an ODL controller instance.
@@ -21,7 +25,9 @@ class OpenDaylight(object):
 
         """
         # TODO: Pull image name from config.yaml
-        docker_lib.run("opendaylight/helium:dev", "./bin/start")
+        self.docker.create_container("opendaylight/helium:dev",
+                                     command="./bin/start",
+                                     detach=True)
 
     def stop(self):
         """API entry point for stopping an ODL controller instance.
@@ -32,4 +38,6 @@ class OpenDaylight(object):
 
         """
         # TODO: Pull image name from config.yaml
-        docker_lib.run("opendaylight/helium:dev", "./bin/stop")
+        self.docker.create_container("opendaylight/helium:dev",
+                                     command="./bin/stop",
+                                     detach=True)

@@ -25,7 +25,7 @@ setup(
     # See for more install_requires info: http://goo.gl/vCOKSw
     # See for more install_requires info: http://goo.gl/5zQKIF
     # TODO: List all known minimum requirements
-    install_requires=["pyyaml"],
+    install_requires=["pyyaml", "docker-py"],
     # TODO: List dev and test env requirements
     extras_require={
         "dev": [],

@@ -3,3 +3,4 @@ tox==1.7.1
 flake8==2.2.0
 pytest==2.5.2
 Sphinx==1.2.3
+docker-py==0.5.3
