@@ -87,7 +87,7 @@ class CLI(cmd.Cmd):
     def help_help(self):
         """Provide help message for help command."""
         print("help [command]")
-        print("\tProvide help on given command. If no argument, list commands.")
+        print("\tProvide help on given command. If no arg, list commands.")
 
 if __name__ == "__main__":
     CLI().cmdloop()
