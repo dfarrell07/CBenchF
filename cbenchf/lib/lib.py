@@ -2,11 +2,11 @@
 
 from os import path
 import logging.handlers
+import sys
 
 try:
     import yaml
 except ImportError as err:
-    import sys
     sys.stderr.write("ERROR: {}. Are you in a venv with pyyaml?\n".format(err))
     raise
 
@@ -44,10 +44,15 @@ def get_config(config_file=None):
     if config_file == _loaded_config_file:
         return _config
 
-    with open(config_file) as config_fd:
-        _config = yaml.load(config_fd)
-        _loaded_config_file = config_file
-        return _config
+    try:
+        with open(config_file) as config_fd:
+            _config = yaml.load(config_fd)
+            _loaded_config_file = config_file
+            return _config
+    except IOError as e:
+        err_msg = "Couldn't find config file. Are you in the root of repo?\n"
+        sys.stderr.write(err_msg)
+        raise e
 
 
 def get_logger():
