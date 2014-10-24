@@ -12,6 +12,7 @@ class OpenDaylight(object):
     def __init__(self):
         """Build logger."""
         self.logger = lib.get_logger()
+        self.config = lib.get_config()
         self.docker = docker_mod.Client(base_url="unix://var/run/docker.sock",
                                         version="1.2.0",
                                         timeout=10)
@@ -24,8 +25,7 @@ class OpenDaylight(object):
         TODO: Verify that this works.
 
         """
-        # TODO: Pull image name from config.yaml
-        self.docker.create_container("opendaylight/helium:dev",
+        self.docker.create_container(self.config["odl_docker_image"],
                                      command="./bin/start",
                                      detach=True)
         # TODO: Do we need to commit the container?
@@ -38,8 +38,7 @@ class OpenDaylight(object):
         TODO: Verify that this works.
 
         """
-        # TODO: Pull image name from config.yaml
-        self.docker.create_container("opendaylight/helium:dev",
+        self.docker.create_container(self.config["odl_docker_image"],
                                      command="./bin/stop",
                                      detach=True)
         # TODO: Do we need to commit the container?
@@ -52,8 +51,7 @@ class OpenDaylight(object):
 
         """
         feature_install_cmd = "./bin/client feature:install {}".format(feature)
-        # TODO: Pull image name from config.yaml
-        self.docker.create_container("opendaylight/helium:dev",
+        self.docker.create_container(self.config["odl_docker_image"],
                                      command=feature_install_cmd,
                                      detach=True)
         # TODO: Do we need to commit the container?
