@@ -2,4 +2,4 @@
 logging: {log_file: cbenchf/logs/cbenchf.log, file_handler_level: DEBUG, stream_handler_level: INFO}
 
 # OpenDaylight Docker image name
-odl_docker_image: "opendaylight/helium:base"
+odl_docker_image: "dfarrell07/helium:dev"
