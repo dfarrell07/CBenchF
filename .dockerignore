@@ -1,0 +1,4 @@
+.git
+*egg
+*egg-info
+.tox
