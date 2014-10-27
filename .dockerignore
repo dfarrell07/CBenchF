@@ -2,3 +2,9 @@
 *egg
 *egg-info
 .tox
+# TODO: Confirm this works
+# TODO: Auto-include .gitignore'd files?
+*.swp
+*.swo
+*.swn
+*.swm

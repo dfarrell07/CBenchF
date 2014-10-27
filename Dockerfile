@@ -1,12 +1,11 @@
-# Base the image on Debian 8 (Jessie)
+# Base the image on Debian 7
 # Picked Debian image because it's small
-# Need 8 (not released) because Docker-in-Docker requires 3.14 kernel
 # https://registry.hub.docker.com/_/debian/
-FROM debian:jessie
+FROM debian:7
 MAINTAINER Daniel Farrell <dfarrell@redhat.com>
 
 # Install required software
-RUN apt-get update && apt-get install -y python-pip wget docker.io
+RUN apt-get update && apt-get install -y python-pip wget
 RUN wget -q --no-check-certificate "https://raw.githubusercontent.com/dfarrell07/CBenchF/master/requirements.txt" && \
     pip install -r requirements.txt && \
     rm requirements.txt
