@@ -26,7 +26,6 @@ class OpenDaylight(object):
 
         """
         self.docker.create_container(self.config["odl_docker_image"],
-                                     command="./bin/start",
                                      detach=True)
         # TODO: Do we need to commit the container?
 
