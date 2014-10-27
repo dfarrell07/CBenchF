@@ -25,7 +25,8 @@ class OpenDaylight(object):
             self.config["odl_docker_image"]))
 
         # Create an ODL Docker container
-        self.odl = self.docker.create_container(self.config["odl_docker_image"])
+        self.odl = self.docker.create_container(
+            self.config["odl_docker_image"])
         self.logger.debug("Created ODL Docker container")
 
     def start(self):
