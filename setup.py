@@ -6,7 +6,7 @@ setup(
     description="SDN Controller Performance Testing Framework",
     url="https://github.com/dfarrell07/CBenchF",
     author="Daniel Farrell",
-    author_email="dfarrell07@redhat.com",
+    author_email="dfarrell@redhat.com",
     # See for more classifer options: http://goo.gl/8jtDH4
     classifiers=[
         "Development Status :: 3 - Alpha",
