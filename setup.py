@@ -10,13 +10,12 @@ setup(
     # See for more classifer options: http://goo.gl/8jtDH4
     classifiers=[
         "Development Status :: 3 - Alpha",
-        "Framework :: Flask",
         "Natural Language :: English",
-        # TODO: Test with other versions of Python
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.3",
-        "Programming Language :: Python :: Implementation :: CPython"
+        "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: PyPy",
+        "License :: OSI Approved :: BSD License",
     ],
     keywords="SDN Software Defined Networking OpenDaylight controller \
               performace testing CBench WCBench OpenStack",
