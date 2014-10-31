@@ -2,7 +2,25 @@ language: python
 python:
   - "3.3"
   - "2.7"
+
 # Install dependencies
 install: pip install -r requirements.txt
-# Run tests
-script: tox
+
+# Command to run tests
+script: tox -vv
+
+# Sets Travis to run these test jobs in parallel, report them independently
+env:
+    - TOXENV=py27
+    - TOXENV=py33
+    - TOXENV=pypy
+    - TOXENV=docs
+    - TOXENV=pep8
+
+# Configure notifications
+notifications:
+    email:
+        recipients:
+            - dfarrell07@gmail.com
+    on_success: change
+    on_failure: always
