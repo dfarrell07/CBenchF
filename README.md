@@ -6,6 +6,8 @@ SDN Controller Benchmark Framework
 
 **This project is very new, under early development. It is not ready for use!**
 
+Note: There are a number of TODOs external to CBenchF that need to be knocked out before CBenchF can continue (for example, Dockerizing OpenDaylight). I'm working on those TODOs in the context of the ODL Integration Team. Don't take a lack of commits here as a lack of progress. ;)
+
 ### Overview
 
 This project aims to bring some sanity to the SDN controller performance testing landscape by providing a well architected framework for such tests.
